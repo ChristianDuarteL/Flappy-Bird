@@ -7,3 +7,17 @@ export default interface Entity {
     draw: (renderer: Renderer) => void
     dispose: () => void
 }
+
+export abstract class AbstractEntity implements Entity {
+    readonly zIndex: number = 0;
+    readonly boundingBox: [number, number, number, number] = [0, 0, 432, 768]
+    tick(delta: number) {
+
+    }
+    draw(renderer: Renderer) {
+
+    }
+    dispose() {
+
+    }
+}
