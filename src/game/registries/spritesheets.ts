@@ -24,7 +24,7 @@ SPRITESHEETS_REGISTRY.set("flappy_bird", new SpriteSheet(loadImage('./flappy-bir
             frames: 3,
         },
         {
-            name: 'bird',
+            name: 'pipes',
             x: 432,
             y: 108,
             cell_size: [78, 480],

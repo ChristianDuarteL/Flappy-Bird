@@ -1,3 +1,4 @@
+import { Scene } from '$/scene/Scene';
 import Renderer from '../engine/rendering/Renderer';
 
 export default interface Entity {
@@ -11,10 +12,16 @@ export default interface Entity {
 export abstract class AbstractEntity implements Entity {
     readonly zIndex: number = 0;
     readonly boundingBox: [number, number, number, number] = [0, 0, 432, 768]
-    tick(delta: number) {
+    readonly scene: Scene;
+
+    constructor(scene: Scene) {
+        this.scene = scene;
+    }
+
+    tick(_delta: number) {
 
     }
-    draw(renderer: Renderer) {
+    draw(_renderer: Renderer) {
 
     }
     dispose() {
